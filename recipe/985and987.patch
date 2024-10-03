@@ -13,7 +13,7 @@ diff --git a/bindings/CMakeLists.txt b/bindings/CMakeLists.txt
 index ea477e8f54..38d836de1c 100644
 --- a/bindings/CMakeLists.txt
 +++ b/bindings/CMakeLists.txt
-@@ -58,8 +58,7 @@ if(CREATE_PYTHON)
+@@ -58,7 +58,6 @@ if(CREATE_PYTHON)
                       LANGUAGE python
                       SOURCES icub.i)
 -     target_link_libraries(${SWIG_MODULE_icub_python_REAL_NAME} Python::Python ${ICUB_SWIG_LIBRARIES})
