@@ -16,8 +16,8 @@ index ea477e8f54..38d836de1c 100644
 @@ -58,7 +58,6 @@ if(CREATE_PYTHON)
                       LANGUAGE python
                       SOURCES icub.i)
--     target_link_libraries(${SWIG_MODULE_icub_python_REAL_NAME} Python::Python ${ICUB_SWIG_LIBRARIES})
-+     target_link_libraries(${SWIG_MODULE_icub_python_REAL_NAME} Python::Module ${ICUB_SWIG_LIBRARIES})
+-    target_link_libraries(${SWIG_MODULE_icub_python_REAL_NAME} Python::Python ${ICUB_SWIG_LIBRARIES})
++    target_link_libraries(${SWIG_MODULE_icub_python_REAL_NAME} Python::Module ${ICUB_SWIG_LIBRARIES})
 -    set_target_properties(${SWIG_MODULE_icub_python_REAL_NAME} PROPERTIES OUTPUT_NAME "_icub")
  
      # installation path is determined reliably on most platforms using distutils
