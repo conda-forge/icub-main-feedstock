@@ -11,7 +11,7 @@ source:
       - 985.patch
 
 build:
-  number: 2
+  number: 3
 
 outputs:
   - name: libicub-main
@@ -71,8 +71,6 @@ outputs:
     script: build_py.sh  # [unix]
     script: bld_py.bat  # [win]
     build:
-      # workaround for https://github.com/conda-forge/staged-recipes/pull/27692#issuecomment-2375285069
-      skip: true  # [osx]
     requirements:
       build:
         - {{ compiler('c') }}
@@ -98,8 +96,6 @@ outputs:
     build:
       run_exports:
         - {{ pin_subpackage("libicub-main", max_pin='x.x.x') }}
-      # workaround for https://github.com/conda-forge/staged-recipes/pull/27692#issuecomment-2375285069
-      skip: true  # [osx]
     requirements:
       run:
         - {{ pin_subpackage("libicub-main", exact=True) }}
