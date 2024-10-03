@@ -32,8 +32,6 @@ outputs:
         # yarp_idl_thrift is used in this recipe, so during
         # cross-compilation we need to install it in the build env
         - libyarp                                # [build_platform != target_platform]
-        - python                                 # [build_platform != target_platform]
-        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
         - ycm-cmake-modules
         - ace
@@ -81,6 +79,8 @@ outputs:
         - cmake
         - pkg-config
         - ninja
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
         - {{ pin_subpackage('libicub-main', exact=True) }}
         - python
