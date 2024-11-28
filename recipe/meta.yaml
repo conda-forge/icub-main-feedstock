@@ -11,7 +11,7 @@ source:
       - 985and987.patch
 
 build:
-  number: 3
+  number: 4
 
 outputs:
   - name: libicub-main
