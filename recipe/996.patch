@@ -1,0 +1,27 @@
+From e5e23a5b7293080c1bd4627f94013845b4aa1e3d Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio.traversaro@iit.it>
+Date: Fri, 29 Nov 2024 09:14:48 +0100
+Subject: [PATCH] Replace SWIG_Python_AppendOutput with SWIG_AppendOutput for
+ SWIG 4.3.0 compatibility
+
+---
+ bindings/icub.i | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/bindings/icub.i b/bindings/icub.i
+index eb22a0194e..181d6abe35 100644
+--- a/bindings/icub.i
++++ b/bindings/icub.i
+@@ -111,9 +111,9 @@ using namespace yarp::sig;
+     yarp::sig::Matrix* t_out1 = new yarp::sig::Matrix(*$1);
+     yarp::sig::Vector* t_out2 = new yarp::sig::Vector(*$2);
+ 
+-    $result= SWIG_Python_AppendOutput ($result, SWIG_NewPointerObj(t_out1, SWIGTYPE_p_yarp__sig__Matrix, 0 |  0 ));
+-    $result= SWIG_Python_AppendOutput ($result, SWIG_NewPointerObj(t_out2, SWIGTYPE_p_yarp__sig__VectorOfT_double_t, 0 |  0 ));
+-    $result= SWIG_Python_AppendOutput ($result, PyFloat_FromDouble(*$3));
++    $result= SWIG_AppendOutput ($result, SWIG_NewPointerObj(t_out1, SWIGTYPE_p_yarp__sig__Matrix, 0 |  0 ));
++    $result= SWIG_AppendOutput ($result, SWIG_NewPointerObj(t_out2, SWIGTYPE_p_yarp__sig__VectorOfT_double_t, 0 |  0 ));
++    $result= SWIG_AppendOutput ($result, PyFloat_FromDouble(*$3));
+ }
+ #endif
+ 
