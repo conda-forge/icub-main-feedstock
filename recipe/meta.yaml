@@ -1,4 +1,4 @@
-{% set version = "2.7.0" %}
+{% set version = "2.7.1" %}
 
 package:
   name: icub-main-split
@@ -6,9 +6,7 @@ package:
 
 source:
   - url: https://github.com/robotology/icub-main/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: baebcc60f5c85fe20ecde378c8db13dd0ded5be6cc836f809ebbdd85deba762a
-    patches:
-      - 996.patch
+    sha256: fa06bda5fd2fa9a307e0feb05fb11be216ab1b0f99078cb4222fb70b5a326a76
 
 build:
   number: 0
@@ -60,12 +58,14 @@ outputs:
         - test -f ${PREFIX}/lib/libiKin${SHLIB_EXT}  # [unix]
         - if not exist %LIBRARY_LIB%\\iKin.lib exit 1  # [win]
         - if not exist %LIBRARY_BIN%\\iKin.dll exit 1  # [win]
-        - cmake-package-check ICUB --targets iKin ctrlLib
+        # For some reason find_package(ICUB) fails on linux-aarch64
+        - cmake-package-check ICUB --targets iKin ctrlLib  # [aarch64]
       requires:
         - cmake-package-check
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - cmake
+        - pkg-config
 
   - name: icub-main-python
     script: build_py.sh  # [unix]
