@@ -58,7 +58,8 @@ outputs:
         - test -f ${PREFIX}/lib/libiKin${SHLIB_EXT}  # [unix]
         - if not exist %LIBRARY_LIB%\\iKin.lib exit 1  # [win]
         - if not exist %LIBRARY_BIN%\\iKin.dll exit 1  # [win]
-        - cmake-package-check ICUB --targets iKin ctrlLib
+        # For some reason find_package(ICUB) fails on linux-aarch64
+        - cmake-package-check ICUB --targets iKin ctrlLib  # [not aarch64]
       requires:
         - cmake-package-check
         - {{ compiler('c') }}
