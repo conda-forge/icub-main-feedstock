@@ -59,12 +59,13 @@ outputs:
         - if not exist %LIBRARY_LIB%\\iKin.lib exit 1  # [win]
         - if not exist %LIBRARY_BIN%\\iKin.dll exit 1  # [win]
         # For some reason find_package(ICUB) fails on linux-aarch64
-        - cmake-package-check ICUB --targets iKin ctrlLib  # [not aarch64]
+        - cmake-package-check ICUB --targets iKin ctrlLib
       requires:
         - cmake-package-check
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - cmake
+        - pkg-config
 
   - name: icub-main-python
     script: build_py.sh  # [unix]
