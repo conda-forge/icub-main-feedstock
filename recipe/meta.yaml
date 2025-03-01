@@ -9,7 +9,7 @@ source:
     sha256: be331694f0c65d8ab43665b38e1c43dc2988dc7653c24717e4a3e5eb1f6a6143
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: libicub-main
