@@ -19,7 +19,7 @@ libcblas:
 libopencv:
 - 4.11.0
 libyarp:
-- 3.11.2
+- 3.12.0
 pin_run_as_build:
   python:
     min_pin: x.x
