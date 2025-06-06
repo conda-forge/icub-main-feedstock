@@ -48,7 +48,7 @@ outputs:
         - freeglut  # [not osx]
         - libglu  # [linux]
         - libyarp
-        - libicub-firmware-shared
+        - libicub-firmware-shared >=1.43.0
         - libgl-devel  # [linux]
       run:
         # Workaround for https://github.com/conda-forge/libglu-feedstock/issues/25
