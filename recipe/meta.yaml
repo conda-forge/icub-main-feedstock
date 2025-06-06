@@ -1,4 +1,4 @@
-{% set version = "2.8.2" %}
+{% set version = "2.9.0" %}
 
 package:
   name: icub-main-split
@@ -6,10 +6,10 @@ package:
 
 source:
   - url: https://github.com/robotology/icub-main/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 83c6e20151bca95069aeda5fe028cb932ce3eea98112529cfc708d69c8a59420
+    sha256: 9844fb1d13b1da1e120d9d3152fdaa631c19937fff656ab11934a511059d978b
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: libicub-main
