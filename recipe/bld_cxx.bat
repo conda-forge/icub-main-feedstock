@@ -32,6 +32,9 @@ cmake %CMAKE_ARGS% ^
     -DENABLE_icubmod_parametricCalibrator:BOOL=ON ^
     -DENABLE_icubmod_parametricCalibratorEth:BOOL=ON ^
     -DENABLE_icubmod_embObjPOS:BOOL=ON ^
+    -DENABLE_icubmod_rawValuesPublisherClient:BOOL=ON ^
+    -DENABLE_icubmod_rawValuesPublisherServer:BOOL=ON ^
+    -DENABLE_icubmod_fineCalibrationChecker:BOOL=ON ^
     -DENABLE_icubmod_xsensmtx:BOOL=OFF ^
     -DENABLE_icubmod_socketcan:BOOL=OFF ^
     -DICUB_USE_icub_firmware_shared:BOOL=ON ^
