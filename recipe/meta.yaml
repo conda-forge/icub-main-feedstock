@@ -125,4 +125,5 @@ about:
 extra:
   feedstock-name: icub-main
   recipe-maintainers:
+    - Nicogene
     - traversaro
