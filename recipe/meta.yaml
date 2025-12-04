@@ -47,8 +47,8 @@ outputs:
         - libdc1394  # [not win]
         - freeglut  # [not osx]
         - libglu  # [linux]
-        - libyarp
-        - libicub-firmware-shared >=1.43.0
+        - libyarp >=3.12.1
+        - libicub-firmware-shared >=1.45.0
         - libgl-devel  # [linux]
       run:
         # Workaround for https://github.com/conda-forge/libglu-feedstock/issues/25
