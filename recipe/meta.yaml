@@ -1,4 +1,4 @@
-{% set version = "2.11.0" %}
+{% set version = "2.11.1" %}
 
 package:
   name: icub-main-split
@@ -6,7 +6,7 @@ package:
 
 source:
   - url: https://github.com/robotology/icub-main/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: c835fc5879d9f35ba52e594869bfb9c5c713e361126511602463f11f45624e22
+    sha256: 7eb9573dab3740ee5ceb60b54648b8949ad2376311b2c8652940ba4bdd31902c
 
 build:
   number: 0
