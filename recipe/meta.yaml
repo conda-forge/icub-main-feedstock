@@ -1,4 +1,4 @@
-{% set version = "2.11.1" %}
+{% set version = "2.12.1" %}
 
 package:
   name: icub-main-split
@@ -6,10 +6,10 @@ package:
 
 source:
   - url: https://github.com/robotology/icub-main/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 7eb9573dab3740ee5ceb60b54648b8949ad2376311b2c8652940ba4bdd31902c
+    sha256: 326279b0ae90237b3ba84cc67ed1b910eb29a875fbc8b529f2cbbc0a5f077b17
 
 build:
-  number: 4
+  number: 0
 
 outputs:
   - name: libicub-main
@@ -47,8 +47,8 @@ outputs:
         - libdc1394  # [not win]
         - freeglut  # [not osx]
         - libglu  # [linux]
-        - libyarp >=3.12.1
-        - libicub-firmware-shared >=1.45.0
+        - libyarp >=3.12.3
+        - libicub-firmware-shared >=1.46.0
         - libgl-devel  # [linux]
       run:
         # Workaround for https://github.com/conda-forge/libglu-feedstock/issues/25
