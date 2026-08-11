@@ -27,7 +27,7 @@ ipopt:
 libcblas:
 - 3.9.* *netlib
 libopencv:
-- 4.13.0
+- 5.0.0
 libyarp:
 - 3.12.3
 macos_machine:
