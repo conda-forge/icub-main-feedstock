@@ -33,7 +33,7 @@ outputs:
       host:
         - ycm-cmake-modules
         - ace
-        - libopencv >4.1.0, <5.0.0
+        - libopencv >4.1.0,<5.0.0
         # icub-main links to gslcblas library that is symbolic link to cblas
         # we need to explicit list the cblas dependency so that the generic
         # netlib cblas that has cblas.so as SONAME actually gets installed,
