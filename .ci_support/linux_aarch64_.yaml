@@ -1,7 +1,7 @@
 DOCKER_PLATFORM:
 - linux/aarch64
 ace:
-- 8.0.6
+- 8.0.7
 c_compiler:
 - gcc
 c_compiler_version:
@@ -21,7 +21,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-aarch64:alma10
 gsl:
-- '2.7'
+- '2.8'
 ipopt:
 - 3.14.20
 libcblas:
