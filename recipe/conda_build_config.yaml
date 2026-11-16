@@ -1,0 +1,3 @@
+# Keep the YARP build compatible with OpenCV 4 until iCub supports OpenCV 5.
+ace:
+  - 8.0.6
