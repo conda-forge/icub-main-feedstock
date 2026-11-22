@@ -9,7 +9,7 @@ source:
     sha256: 8aa8369434561ec145e7421a8cfa9864b09414b47e5ab3dc858bd0f0966fd82e
 
 build:
-  number: 1
+  number: 2
   skip: true  # [osx]
 
 outputs:
